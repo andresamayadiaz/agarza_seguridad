@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dashboard | HEB - Control de Acceso</title>
+    <title>Reporte Diario | HEB - Control de Acceso</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta content='text/html;charset=utf-8' http-equiv='content-type'>
     <meta content='Prototipo Proyecto HEB Control de Acceso' name='description'>
@@ -261,6 +261,7 @@
                                   <li class='important item'>
                                     <label class='check pull-left todo'>
                                       <input type='checkbox'>
+									  <small>13:24:12</small>
                                       <span>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</span>
                                     </label>
                                     <div class='actions pull-right'>
@@ -460,6 +461,7 @@
           li.find("input[type='checkbox']").attr("checked", false);
           li.removeClass("important").removeClass("done");
           li.find("label.todo span").text(todo_name);
+		  li.find("label.todo small").html(new Date().toJSON());
           $(".todo-list ul").first().prepend(li);
           li.effect("highlight", {}, 700);
         }

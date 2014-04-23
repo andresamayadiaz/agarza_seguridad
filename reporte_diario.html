@@ -518,7 +518,14 @@
           li.find("input[type='checkbox']").attr("checked", false);
           li.removeClass("important").removeClass("done");
           li.find("label.todo span").text(todo_name);
-		  li.find("label.todo small").html(new Date().toJSON() + " " + todo_type);
+		  var d = new Date();
+		  var curr_date = d.getDate();
+		  var curr_month = d.getMonth();
+		  var curr_year = d.getFullYear();
+		  var curr_hour = d.getHours();
+		  var curr_minute = d.getMinutes();
+		  var curr_second = d.getSeconds();
+		  li.find("label.todo small").html(curr_date + "-" + curr_month + "-" + curr_year + " " + curr_hour + ":" + curr_minute + ":" + curr_second  + " " + todo_type);
           $("#todo_list").prepend(li);
           li.effect("highlight", {}, 700);
         }

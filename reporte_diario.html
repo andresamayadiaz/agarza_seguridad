@@ -235,100 +235,90 @@
                 <div class='alert alert-info alert-dismissable'>
                   <a class='close' data-dismiss='alert' href='#'>&times;</a>
                   <strong>NOTA!</strong>
-                  Puedes agregar nuevas actividades en la opción que aparece debajo de este mensaje. Tambien puedes cambiar de orden las actividades con el mouse.
-                  <i class='icon-smile'></i>
+                  Puedes agregar nuevas actividades en la opción que aparece debajo de este mensaje.
                 </div>
 				
                 <div class='row'>
-                  <div class='col-sm-12'>
-                    <div class='box'>
+				
+				  <!-- ACTIVIDADES DIARIAS -->
+                  <div class='col-sm-6'>
+
+					<div class='box col-sm-12'>
                       <div class='row todo-list'>
                         <div class='col-sm-12'>
                           <div class='box'>
+		                      <div class='box-header'>
+		                        <div class='title'>
+		                          <div class='icon-reorder'></div>
+		                          ACTIVIDADES
+		                        </div>
+		                        <div class='actions'>
+		                          <a class="btn btn-xs btn-link" href="#" id="salidas_ayer"><i class='icon-reply-all'></i>
+		                          </a>
+                        		  
+		                          <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+		                          </a>
+		                        </div>
+		                      </div>
                             <div class='box-content box-no-padding'>
-                              <div class='sortable-container'>
-                                          <form class="new-todo" method="post" action="#" accept-charset="UTF-8">
-											  
-											  <input name="authenticity_token" type="hidden" /><input class='form-control' id='todo_name' name='todo[name]' placeholder='Ingresa una actividad aqui...' type='text' autofocus>
-											  <button class='btn btn-success' type='submit'>
-				                                    <i class='icon-plus'></i>
-				                                  </button>
+                              <div class=''>
+								  
+	                              <form class="new-todo" method="post" action="#" accept-charset="UTF-8">
+									  
+									  <input name="authenticity_token" type="hidden" />
+									  <input class='form-control' id='todo_name' name='todo[name]' placeholder='Ingresa una actividad ...' type='text' autofocus>
+									  <select id="todo_type" class="select2 form-control">
+										  <option>Rondin</option>
+										  <option>Aviso</option>
+										  <option>Notificacion</option>
+									  </select>
+									  <button class='btn btn-success' type='submit'>
+		                                    <i class='icon-plus'></i>
+		                                  </button>
 
-                                </form>
+	                                </form>
                     
                                 <div class='date text-contrast'>Hoy</div>
-                                <ul class='list-unstyled sortable' data-sortable-axis='y' data-sortable-connect='.sortable'>
+                                <ul class='list-unstyled' id="todo_list">
                                   <li class='important item'>
                                     <label class='check pull-left todo'>
-                                      <input type='checkbox'>
-									  <small>13:24:12</small>
+									  <small>13:24:12</small><br>
                                       <span>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</span>
                                     </label>
                                     <div class='actions pull-right'>
-                                      <a class='btn btn-link edit has-tooltip' data-placement='top' href='#' title='Editar'>
-                                        <i class='icon-pencil'></i>
-                                      </a>
-                                      <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
-                                        <i class='icon-remove'></i>
-                                      </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
+                                     
+                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importante'>
                                         <i class='icon-bookmark-empty'></i>
                                       </a>
                                     </div>
                                   </li>
                                   <li class='item'>
                                     <label class='check pull-left todo'>
-                                      <input type='checkbox'>
+									  <small>13:24:12</small><br>
                                       <span>Quisque pharetra nulla sit amet arcu facilisis interdum.</span>
                                     </label>
                                     <div class='actions pull-right'>
-                                      <a class='btn btn-link edit has-tooltip' data-placement='top' href='#' title='Editar'>
-                                        <i class='icon-pencil'></i>
-                                      </a>
-                                      <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
-                                        <i class='icon-remove'></i>
-                                      </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
-                                        <i class='icon-bookmark-empty'></i>
-                                      </a>
-                                    </div>
-                                  </li>
-                                  <li class='done item'>
-                                    <label class='check pull-left todo'>
-                                      <input checked='checked' type='checkbox'>
-                                      <span>Duis id metus rhoncus, hendrerit sem quis, tincidunt sem.</span>
-                                    </label>
-                                    <div class='actions pull-right'>
-                                      <a class='btn btn-link edit has-tooltip' data-placement='top' href='#' title='Editar'>
-                                        <i class='icon-pencil'></i>
-                                      </a>
-                                      <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
-                                        <i class='icon-remove'></i>
-                                      </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
+                                      
+                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importante'>
                                         <i class='icon-bookmark-empty'></i>
                                       </a>
                                     </div>
                                   </li>
                                   <li class='item'>
                                     <label class='check pull-left todo'>
-                                      <input type='checkbox'>
-                                      <span>Fusce dictum nisl sed vehicula aliquet.</span>
+									  <small>13:24:12</small><br>
+                                      <span>Duis id metus rhoncus, hendrerit sem quis, tincidunt sem.</span>
                                     </label>
                                     <div class='actions pull-right'>
-                                      <a class='btn btn-link edit has-tooltip' data-placement='top' href='#' title='Editar'>
-                                        <i class='icon-pencil'></i>
-                                      </a>
-                                      <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
-                                        <i class='icon-remove'></i>
-                                      </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
+                                      
+                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importante'>
                                         <i class='icon-bookmark-empty'></i>
                                       </a>
                                     </div>
                                   </li>
                                 </ul>
-                                <div class='date text-contrast'>ULTIMAS DE AYER</div>
+								
+                                <div class='date text-contrast'>AYER</div>
                                 <ul class='list-unstyled sortable' data-sortable-axis='y' data-sortable-connect='.sortable'>
                                   <li class='item'>
                                     <label class='check pull-left todo'>
@@ -342,7 +332,7 @@
                                       <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
                                         <i class='icon-remove'></i>
                                       </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
+                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importante'>
                                         <i class='icon-bookmark-empty'></i>
                                       </a>
                                     </div>
@@ -359,7 +349,7 @@
                                       <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
                                         <i class='icon-remove'></i>
                                       </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
+                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importante'>
                                         <i class='icon-bookmark-empty'></i>
                                       </a>
                                     </div>
@@ -376,24 +366,7 @@
                                       <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
                                         <i class='icon-remove'></i>
                                       </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
-                                        <i class='icon-bookmark-empty'></i>
-                                      </a>
-                                    </div>
-                                  </li>
-                                  <li class='item'>
-                                    <label class='check pull-left todo'>
-                                      <input type='checkbox'>
-                                      <span>Dignissimos aut voluptatem deleniti deserunt</span>
-                                    </label>
-                                    <div class='actions pull-right'>
-                                      <a class='btn btn-link edit has-tooltip' data-placement='top' href='#' title='Editar'>
-                                        <i class='icon-pencil'></i>
-                                      </a>
-                                      <a class='btn btn-link remove has-tooltip' data-placement='top' href='#' title='Eliminar'>
-                                        <i class='icon-remove'></i>
-                                      </a>
-                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importamte'>
+                                      <a class='btn btn-link important has-tooltip' data-placement='top' href='#' title='Marcar Como Importante'>
                                         <i class='icon-bookmark-empty'></i>
                                       </a>
                                     </div>
@@ -405,7 +378,90 @@
                         </div>
                       </div>
                     </div>
+
                   </div>
+				  <!-- FIN ACTIVIDADES DIARIAS -->
+				  
+				  <!-- RECORDATORIOS -->
+                  <div class='col-sm-6'>
+					<div class='box col-sm-12'>
+                      <div class='row todo-list'>
+                        <div class='col-sm-12'>
+                          <div class='box'>
+		                      <div class='box-header'>
+		                        <div class='title'>
+		                          <div class='icon-bullhorn'></div>
+		                          RECORDATORIOS
+		                        </div>
+		                        <div class='actions'>
+                        
+		                          <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+		                          </a>
+		                        </div>
+		                      </div>
+                            <div class='box-content box-no-padding'>
+                              <div class=''>
+                                          <form class="new-todo" method="post" action="#" accept-charset="UTF-8">
+											  
+											  <input name="authenticity_token" type="hidden" /><input class='form-control' id='reminder_name' name='reminder[name]' placeholder='Ingresa un recordatorio ...' type='text'>
+											  <button class='btn btn-success' type='submit'>
+				                                    <i class='icon-plus'></i>
+				                                  </button>
+
+                                </form>
+                    			
+                                <div class='date text-contrast'>Hoy</div>
+                                <ul class='list-unstyled'>
+                                  <li class='item'>
+                                    <label class='check pull-left todo'>
+                                      <input type='checkbox'>
+									  <small>21-04-2014 13:24:12</small><br>
+                                      <span>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</span>
+                                    </label>
+                                    <div class='actions pull-right'>
+										<small>rlopez</small>
+                                    </div>
+                                  </li>
+                                  <li class='item'>
+                                    <label class='check pull-left todo'>
+                                      <input type='checkbox'>
+									  <small>21-04-2014 13:24:12</small><br>
+                                      <span>Quisque pharetra nulla sit amet arcu facilisis interdum.</span>
+                                    </label>
+                                    <div class='actions pull-right'>
+										<small>fgonzalez</small>
+                                    </div>
+                                  </li>
+                                  <li class='done item'>
+                                    <label class='check pull-left todo'>
+                                      <input checked='checked' type='checkbox'>
+									  <small>21-04-2014 13:24:12 mkunis</small><br>
+                                      <span>Duis id metus rhoncus, hendrerit sem quis, tincidunt sem.</span>
+                                    </label>
+                                    <div class='actions pull-right'>
+										<small>rlopez</small>
+                                    </div>
+                                  </li>
+                                  <li class='item'>
+                                    <label class='check pull-left todo'>
+                                      <input type='checkbox'>
+									  <small>21-04-2014 13:24:12</small><br>
+                                      <span>Fusce dictum nisl sed vehicula aliquet.</span>
+                                    </label>
+                                    <div class='actions pull-right'>
+										<small>antonio</small>
+                                    </div>
+                                  </li>
+                                </ul>
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+				  <!-- FIN RECORDATORIOS -->
                 </div>
 				
               </div>
@@ -453,21 +509,23 @@
 	<!-- / START - page related files and scripts [optional] -->
     <script>
       $(".todo-list .new-todo").live('submit', function(e) {
-        var li, todo_name;
+        var li, todo_name, todo_type;
         todo_name = $(this).find("#todo_name").val();
+		todo_type = $(this).find("#todo_type").val();
         $(this).find("#todo_name").val("");
         if (todo_name.length !== 0) {
           li = $(this).parents(".todo-list").find("li.item").first().clone();
           li.find("input[type='checkbox']").attr("checked", false);
           li.removeClass("important").removeClass("done");
           li.find("label.todo span").text(todo_name);
-		  li.find("label.todo small").html(new Date().toJSON());
-          $(".todo-list ul").first().prepend(li);
+		  li.find("label.todo small").html(new Date().toJSON() + " " + todo_type);
+          $("#todo_list").prepend(li);
           li.effect("highlight", {}, 700);
         }
         return e.preventDefault();
       });
       
+	  /*
       $(".todo-list .actions .remove").live("click", function(e) {
         $(this).tooltip("hide");
         $(this).parents("li").fadeOut(500, function() {
@@ -477,6 +535,7 @@
         e.preventDefault();
         return false;
       });
+	  */
       
       $(".todo-list .actions .important").live("click", function(e) {
         $(this).parents("li").toggleClass("important");

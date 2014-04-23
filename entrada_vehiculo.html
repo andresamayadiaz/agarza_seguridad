@@ -13,6 +13,12 @@
     <link href='assets/images/meta_icons/apple-touch-icon-144x144.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
     <!-- / START - page related stylesheets [optional] -->
     <link href="assets/stylesheets/plugins/select2/select2.css" media="all" rel="stylesheet" type="text/css" />
+	<style>
+	.label-white {
+	  background-color: #FFFFFF; }
+  	.label-yellow {
+  	  background-color: #E6E600; }
+	</style>
     <!-- / END - page related stylesheets [optional] -->
     <!-- / bootstrap [required] -->
     <link href="assets/stylesheets/bootstrap/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
@@ -219,7 +225,8 @@
       </nav>
       <section id='content'>
         <div class='container'>
-          <div class='row' id='content-wrapper'>
+          
+		  <div class='row' id='content-wrapper'>
             <div class='col-xs-12'>
               <div class='row'>
                 <div class='col-sm-12'>
@@ -340,17 +347,25 @@
                         <div class='form-group'>
                           <label class='control-label col-sm-3' for='validation_select'>Color del Vehiculo</label>
                           <div class='col-sm-6 controls'>
+	                          <label class='radio radio-inline'>
+	                            <input name='color_vehiculo' type='radio' value=''>
+							  <div class='label label-white' style="color: black;">Blanco</div>
+	                          </label>
                             <label class='radio radio-inline'>
                               <input name='color_vehiculo' type='radio' value=''>
-							  <div class='label label-default'>Gris/Blanco</div>
+							  <div class='label label-default'>Gris</div>
                             </label>
                             <label class='radio radio-inline'>
                               <input name='color_vehiculo' type='radio' value=''>
                               <div class='label label-primary'>Azul</div>
                             </label>
+                          <label class='radio radio-inline'>
+                            <input name='color_vehiculo' type='radio' value=''>
+						  <div class='label label-yellow'>Amarillo</div>
+                          </label>
                             <label class='radio radio-inline'>
                               <input name='color_vehiculo' type='radio' value=''>
-                              <div class='label label-warning'>Amarillo/Naranja</div>
+                              <div class='label label-warning'>Naranja</div>
                             </label>
                             <label class='radio radio-inline'>
                               <input name='color_vehiculo' type='radio' value=''>
@@ -395,6 +410,179 @@
               </div>
             </div>
           </div>
+		  
+		  <div class='row'>
+              <div class='col-sm-12'>
+                <div class='box'>
+                  <div class='box-header'>
+                    <div class='title'>
+                      <div class='icon-arrow-down'></div>
+                      EN LAS INSTALACIONES (9)
+                    </div>
+                    <div class='actions'>
+                      <!-- ><a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                      </a> -->
+                      
+                      <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class='row'>
+					  
+                    <div class='col-sm-4' id='entradas'>
+						
+                      <div class='box-content box-statistic'>
+					  
+                      <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>3</a></h1>
+                        <div class='text-warning icon-road align-right'></div>
+						<br>
+						<address>
+							2014-03-28 13:45:19
+							<br>
+							<strong>Alberto Perez Lopez</strong>
+							<br>
+							Contabilidad
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                      <div class='box-content box-statistic'>
+                        <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>8</a></h1>
+                        <br>
+                        <div class='text-warning icon-road align-right'>
+                        </div>
+						<address>
+							2014-03-28 13:45:19
+							<br>
+							<strong>Alberto Perez Lopez</strong>
+							<br>
+							Contabilidad
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                      <div class='box-content box-statistic'>
+                        <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>9</a></h1>
+                        <br>
+                        <div class='text-warning icon-road align-right'>
+                        	
+                        </div>
+						<address>
+							2014-03-28 12:22:06
+							<br>
+							<strong>Arnulfo Gutierrez</strong>
+							<br>
+							Sistemas
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+                    </div>
+					
+                    <div class='col-sm-4'>
+						
+                      <div class='box-content box-statistic'>
+					  
+                      <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>11</a></h1>
+                        <div class='text-warning icon-road align-right'></div>
+						<br>
+						<address>
+							2014-03-28 13:45:19
+							<br>
+							<strong>Alberto Perez Lopez</strong>
+							<br>
+							Contabilidad
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                      <div class='box-content box-statistic'>
+                        <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>15</a></h1>
+                        <br>
+                        <div class='text-warning icon-road align-right'>
+                        	
+                        </div>
+						<address>
+							2014-03-28 12:22:06
+							<br>
+							<strong>Arnulfo Gutierrez</strong>
+							<br>
+							Sistemas
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                      <div class='box-content box-statistic'>
+                        <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>17</a></h1>
+                        <br>
+                        <div class='text-warning icon-road align-right'>
+                        </div>
+						<address>
+							2014-03-28 13:45:19
+							<br>
+							<strong>Alberto Perez Lopez</strong>
+							<br>
+							Contabilidad
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                    </div>
+					
+                    <div class='col-sm-4'>
+						
+                      <div class='box-content box-statistic'>
+                        <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>18</a></h1>
+                        <br>
+                        <div class='text-warning icon-road align-right'>
+                        </div>
+						<address>
+							2014-03-28 13:45:19
+							<br>
+							<strong>Alberto Perez Lopez</strong>
+							<br>
+							Contabilidad
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>	
+					  
+                      <div class='box-content box-statistic'>
+					  
+                      <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>20</a></h1>
+                        <div class='text-warning icon-road align-right'></div>
+						<br>
+						<address>
+							2014-03-28 13:45:19
+							<br>
+							<strong>Alberto Perez Lopez</strong>
+							<br>
+							Contabilidad
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                      <div class='box-content box-statistic'>
+                        <h1 class='title text-warning'><a class='title text-warning' data-toggle='modal' href='#modal-road' role='button'>22</a></h1>
+                        <br>
+                        <div class='text-warning icon-road align-right'>
+                        	
+                        </div>
+						<address>
+							2014-03-28 12:22:06
+							<br>
+							<strong>Arnulfo Gutierrez</strong>
+							<br>
+							Sistemas
+						</address>
+						<a class="btn btn-xs btn-danger" href="#" onclick="salir(this);">Salir</a>
+                      </div>
+					  
+                    </div>
+					
+                  </div>
+                </div>
+              </div>
+		  </div>
+		  
           <footer id='footer'>
             <div class='footer-wrapper'>
               <div class='row'>
